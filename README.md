@@ -1,474 +1,379 @@
 # 📚 AI Smart Study Assistant
 
-### AI-Powered Lecture Notes & Quiz Automation System
+### AI-Powered Lecture Notes, Quiz Generation & Student Performance Tracking
 
-Transform a lecture topic into AI-generated study notes, professional PDF materials, interactive quizzes, Google Forms, and automated student emails—all through a single n8n workflow powered by Gemini Pro.
+An AI-powered workflow automation system that transforms a lecture topic into structured study notes, professional PDF materials, interactive Google Form quizzes, and automatically distributes them to students while tracking their quiz performance—all through an intelligent n8n workflow.
 
-> 🚀 Built with **n8n**, **Gemini Pro**, **PDF.co**, **Google Forms API**, **Gmail**, and **JavaScript**.
+<p align="center">
 
-![n8n](https://img.shields.io/badge/n8n-Automation-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
+![n8n](https://img.shields.io/badge/n8n-Workflow%20Automation-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
+![Gemini](https://img.shields.io/badge/Google-Gemini%20Pro-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Google Forms](https://img.shields.io/badge/Google%20Forms-Quiz%20Automation-34A853?style=for-the-badge&logo=googleforms&logoColor=white)
+![PDF.co](https://img.shields.io/badge/PDF.co-PDF%20Generation-0A84FF?style=for-the-badge)
+![Gmail](https://img.shields.io/badge/Gmail-Email%20Automation-EA4335?style=for-the-badge&logo=gmail&logoColor=white)
 
-![Gemini](https://img.shields.io/badge/Google-Gemini_Pro-4285F4?style=for-the-badge&logo=google&logoColor=white)
+</p>
 
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+---
 
-![PDF.co](https://img.shields.io/badge/PDF.co-PDF_Generation-blue?style=for-the-badge)
+## 📑 Table of Contents
 
-![Google Forms](https://img.shields.io/badge/Google_Forms-Quiz_Automation-34A853?style=for-the-badge&logo=googleforms&logoColor=white)
+- [✨ Project Highlights](#-project-highlights)
+- [🚀 Project Overview](#-project-overview)
+- [🎯 Problem Statement](#-problem-statement)
+- [💡 Solution](#-solution)
+- [🏗️ System Architecture](#️-system-architecture)
+- [🛠️ Technology Stack](#️-technology-stack)
+- [⚙️ How the System Works](#️-how-the-system-works)
+- [🤖 AI Content Generation & Distribution](#-ai-content-generation--distribution)
+- [📊 Student Performance Tracking](#-student-performance-tracking)
+- [📸 Project Outputs](#-project-outputs)
+- [🎯 Real-World Use Case](#-real-world-use-case)
+- [🚧 Challenges Faced](#-challenges-faced)
+- [🚀 Future Enhancements](#-future-enhancements)
+- [🎓 Key Learnings](#-key-learnings)
+- [👨‍💻 Author](#-author)
+- [📄 License](#-license)
+- [⭐ Support](#-support)
 
-![Gmail](https://img.shields.io/badge/Gmail-Email_Automation-EA4335?style=for-the-badge&logo=gmail&logoColor=white)
+---
+
+## ✨ Project Highlights
+
+- 🤖 AI-powered lecture note generation using Google Gemini Pro
+- 📝 Automatic quiz generation from AI-generated study notes
+- 📄 Professional PDF creation using PDF.co
+- 📋 Dynamic Google Form quiz creation
+- 📧 Automatic email distribution to students
+- 📊 Automated student performance tracking
+- ⚡ Fully automated workflow built using n8n
+- 🔄 End-to-end educational workflow automation
 
 ---
 
 ## 🚀 Project Overview
 
-AI Smart Study Assistant is an end-to-end workflow automation system that simplifies lecture preparation and student assessment.
+AI Smart Study Assistant is an end-to-end educational workflow automation system designed to simplify how teachers prepare and distribute learning materials.
 
-Instead of manually writing lecture notes, preparing quizzes, creating PDFs, building Google Forms, and emailing students, teachers only provide a subject and an optional subtopic.
+Instead of manually writing lecture notes, creating quizzes, formatting PDFs, building Google Forms, sending emails, and tracking student performance, teachers only need to provide a lecture topic and an optional subtopic.
 
-The workflow then automatically:
+The system automatically generates AI-powered study materials, converts them into a professional PDF, creates a Google Form quiz, emails the materials to students, and tracks quiz performance through a dedicated reporting workflow.
 
-- Generates structured lecture notes using Gemini Pro
-- Creates quiz questions from the generated notes
-- Converts notes into a professional PDF
-- Builds a Google Form for the quiz
-- Links responses to Google Sheets for tracking
-- Emails the PDF and quiz link to every student
-
-The entire workflow is orchestrated using n8n, eliminating repetitive manual tasks and significantly reducing preparation time.
-
----
-
-## 📸 Project Preview
-
-> *(Workflow image / Demo GIF will be added here.)*
+By combining Artificial Intelligence, workflow automation, and cloud services, the project significantly reduces repetitive manual work while delivering consistent, high-quality learning resources.
 
 ---
 
 ## 🎯 Problem Statement
 
-Preparing study materials after every lecture is a repetitive and time-consuming task for educators. Beyond teaching, instructors often spend significant time creating summarized notes, designing quizzes, formatting PDFs, distributing study materials, and tracking student participation.
+Creating and distributing educational content is a repetitive and time-consuming process for educators. After every lecture, teachers often need to prepare study notes, create quizzes, convert documents into PDFs, distribute learning materials to students, and manually monitor quiz performance.
 
-This manual process can lead to:
+As the number of students increases, these repetitive tasks become difficult to manage and reduce the time educators can dedicate to teaching and student interaction.
 
-- ⏳ Time-consuming lecture preparation
-- 📝 Repetitive creation of study notes
-- ❓ Manual quiz generation
-- 📄 Formatting and exporting notes into PDFs
-- 📤 Sending study materials individually to students
-- 📊 Tracking quiz responses and performance manually
+Some of the common challenges include:
 
-As the number of students and subjects increases, these repetitive tasks reduce the time available for teaching and personalized student support.
+- ⏳ Time-consuming preparation of lecture notes
+- 📝 Manual quiz creation for every topic
+- 📄 Formatting notes into shareable PDF documents
+- 📧 Sending study materials individually to students
+- 📋 Creating online quizzes manually
+- 📊 Tracking student performance and quiz responses
+- 🔁 Repeating the same workflow for every lecture
 
-An automated solution was needed to streamline the entire post-lecture workflow while maintaining consistency and accuracy.
+These challenges highlight the need for an intelligent automation system that can generate, distribute, and track educational content with minimal manual effort.
 
 ---
 
 ## 💡 Solution
 
-AI Smart Study Assistant automates the complete lecture material preparation process using AI and workflow automation.
+AI Smart Study Assistant automates the complete educational content creation and distribution process using Artificial Intelligence and workflow automation.
 
-The teacher simply provides the lecture **subject** and an optional **subtopic**. From that single input, the workflow performs every remaining task automatically.
+Teachers simply provide a lecture **topic** along with an optional **subtopic**, and the system automatically performs every remaining task.
 
-The system:
+The workflow intelligently:
 
-- 📚 Generates AI-powered summarized lecture notes using Gemini Pro
-- ❓ Creates quiz questions based on the generated notes
-- 📄 Converts the notes into a professionally formatted PDF
-- 📝 Automatically creates a Google Form quiz
-- 📊 Links the Google Form with Google Sheets for response tracking
-- 📧 Emails the study notes and quiz link to all students
+- 🤖 Generates AI-powered lecture notes using Google Gemini Pro
+- 📄 Converts notes into a professional PDF document
+- 📝 Creates a multiple-choice quiz from the generated notes
+- 📋 Builds an interactive Google Form automatically
+- 📧 Sends personalized emails containing the PDF and quiz link to students
+- 📊 Tracks student quiz submissions through a dedicated automation workflow
+- 📈 Generates an organized performance report for teachers
 
-The entire pipeline is orchestrated using n8n, significantly reducing manual effort while ensuring every student receives consistent learning materials.
-
----
-
-## ✨ Key Features
-
-- 🤖 AI-generated lecture summaries using Gemini Pro
-- 📚 Supports both subject and optional subtopic inputs
-- ❓ Automatic quiz generation from summarized notes
-- 📄 Professional PDF creation using PDF.co
-- 📝 Automatic Google Form creation via API
-- 📊 Google Sheets integration for quiz response tracking
-- 📧 Bulk email delivery of study materials through Gmail
-- 🔀 End-to-end workflow orchestration with n8n
-- ⚡ Fully automated pipeline requiring minimal teacher input
-- 📈 Scalable workflow for classrooms with multiple students
-
----
-
-## 🛠️ Technology Stack
-
-| Technology | Purpose |
-|------------|---------|
-| **n8n** | Orchestrates the complete workflow by connecting AI services, APIs, and automation steps into a single pipeline. |
-| **Gemini Pro** | Generates AI-powered lecture summaries and creates quiz questions based on the generated notes. |
-| **PDF.co** | Converts AI-generated HTML lecture notes into professionally formatted PDF documents. |
-| **Google Forms API** | Automatically creates quiz forms from AI-generated questions for student assessments. |
-| **Google Sheets** | Stores quiz responses automatically through Google Forms, enabling performance tracking and analysis. |
-| **Gmail** | Sends the generated PDF study material and quiz link to all students via email. |
-| **HTTP Request** | Integrates external APIs such as Google Forms and PDF.co within the workflow. |
-| **JavaScript (Code Node)** | Processes JSON data, formats information, and prepares personalized email data before sending. |
-
----
-
-## ⚙️ Workflow Overview
-
-The Smart Study Assistant follows a fully automated pipeline that transforms a simple teacher input into complete study materials for students.
-
-```text
-Teacher Input
-      │
-      ▼
-AI Summary Generation (Gemini Pro)
-      │
-      ├──────────────────────┐
-      ▼                      ▼
-Quiz Generation          PDF Generation
-      │                      │
-Google Form API         PDF.co
-      │                      │
-      └──────────┬───────────┘
-                 ▼
-            Merge Results
-                 ▼
-        Prepare Student Emails
-                 ▼
-        Gmail Distribution
-                 ▼
-Students Receive PDF + Quiz Link
-```
-
-The teacher only enters the lecture **subject** and an optional **subtopic**. The workflow automatically handles AI content generation, quiz creation, PDF conversion, Google Form creation, and email distribution without requiring additional manual intervention.
-
----
-
-## 🔄 End-to-End Workflow
-
-### Step 1 — Teacher Input
-
-The workflow begins when a teacher submits the lecture subject along with an optional subtopic through a simple HTML form.
-
----
-
-### Step 2 — AI Lecture Summary
-
-Gemini Pro analyzes the provided topic and generates structured, easy-to-understand lecture notes.
-
----
-
-### Step 3 — Parallel Processing
-
-After the summary is generated, the workflow splits into two independent branches that execute simultaneously.
-
-#### Branch A — Quiz Generation
-
-- AI generates multiple quiz questions from the summarized notes.
-- Questions are converted into structured JSON.
-- The JSON is sent to the Google Forms API.
-- A quiz form is created automatically.
-- Google Forms simultaneously creates a linked Google Sheet to collect student responses.
-
----
-
-#### Branch B — PDF Generation
-
-- The summarized lecture notes are converted into HTML.
-- HTML is sent to PDF.co.
-- PDF.co generates a professionally formatted PDF.
-- The completed PDF is downloaded for distribution.
-
----
-
-### Step 4 — Merge
-
-The workflow combines:
-
-- Downloaded PDF
-- Google Form Quiz Link
-
-into a single output.
-
----
-
-### Step 5 — Email Preparation
-
-A JavaScript Code node prepares the list of student email addresses and formats the email content.
-
----
-
-### Step 6 — Student Distribution
-
-The Gmail node automatically sends each student:
-
-- 📄 Lecture Notes (PDF)
-- 📝 Google Form Quiz Link
-
-allowing students to immediately begin studying and complete the assessment online.
+The entire process is orchestrated using **n8n**, allowing multiple cloud services and AI capabilities to work together seamlessly without requiring manual intervention.
 
 ---
 
 ## 🏗️ System Architecture
 
-The Smart Study Assistant is built as an event-driven automation workflow using **n8n** as the orchestration platform. It integrates multiple AI services, APIs, and cloud applications to automate the complete lecture preparation and distribution process.
+The Smart Study Assistant follows a modular, event-driven architecture where **n8n** acts as the central orchestration engine, coordinating AI services, cloud applications, and automation workflows.
 
-### Workflow Components
+The system is divided into two independent workflows:
 
-- **Teacher Input** – Accepts the lecture subject and optional subtopic.
-- **Gemini Pro** – Generates lecture summaries and quiz questions.
-- **PDF.co** – Converts summarized notes into PDF documents.
-- **Google Forms API** – Creates quizzes automatically.
-- **Google Sheets** – Stores student quiz responses.
-- **Code Node** – Processes JSON data and prepares student email information.
-- **Gmail** – Delivers study materials and quiz links to students.
+### 🤖 Workflow 1 — AI Content Generation & Distribution
 
-> 📌 The detailed architecture diagram is available below and visually represents the complete workflow.
+Responsible for generating study materials, creating quizzes, producing PDF notes, and distributing them to students.
 
----
+### 📊 Workflow 2 — Student Performance Tracking
 
-## 📌 Use Case
+Monitors Google Form submissions and automatically updates a centralized student performance report.
 
-A teacher wants to prepare study material for the topic **Cloud Computing**.
-
-Instead of manually creating lecture notes, designing a quiz, formatting a PDF, creating a Google Form, and emailing every student, the teacher simply enters:
-
-**Subject:** Cloud Computing
-
-The workflow automatically:
-
-1. Generates AI-powered lecture notes.
-2. Creates quiz questions.
-3. Builds a Google Form.
-4. Generates a professional PDF.
-5. Links quiz responses to Google Sheets.
-6. Emails the PDF and quiz link to all students.
-
-The complete process is finished automatically with minimal manual effort.
+<p align="center">
+  <img src="assets/architecture/architecture.png" alt="AI Smart Study Assistant Architecture" width="100%">
+</p>
 
 ---
 
-## 📸 Workflow Screenshots
+## 🛠️ Technology Stack
 
-The following screenshots highlight the major stages of the Smart Study Assistant workflow.
+The AI Smart Study Assistant combines Artificial Intelligence, workflow automation, and cloud services to automate the complete educational content lifecycle.
 
-### Complete Workflow
-
-> *(Complete n8n workflow screenshot will be placed here.)*
-
----
-
-### HTML Form
-
-> *(HTML form screenshot)*
-
----
-
-### AI Summary Generation
-
-> *(Gemini Pro Summarization Node)*
+| Technology | Purpose |
+|------------|---------|
+| **n8n** | Central workflow automation platform that orchestrates the complete system. |
+| **Google Gemini Pro** | Generates AI-powered lecture summaries and quiz questions. |
+| **PDF.co API** | Converts AI-generated HTML content into professionally formatted PDF documents. |
+| **Google Forms API** | Automatically creates interactive quizzes from AI-generated questions. |
+| **Google Sheets** | Stores quiz responses and maintains student performance reports. |
+| **Google Sheets Trigger** | Detects new quiz submissions and starts the performance tracking workflow. |
+| **Gmail** | Automatically distributes study materials and quiz links to students. |
+| **JavaScript (n8n Code Node)** | Transforms JSON data, prepares email payloads, and processes workflow logic. |
+| **HTTP Request Node** | Integrates external APIs such as PDF.co and Google Forms. |
 
 ---
 
-### Quiz Generation
+## ⚙️ How the System Works
 
-> *(Quiz Generation Workflow)*
+The Smart Study Assistant is built around two independent yet connected automation workflows.
 
----
+The first workflow focuses on **content generation and distribution**, where Artificial Intelligence creates educational resources and automatically delivers them to students.
 
-### Google Form Creation
+The second workflow focuses on **student performance tracking**, where every quiz submission is automatically recorded and transformed into a structured performance report for educators.
 
-> *(HTTP Request + Google Forms API)*
-
----
-
-### PDF Generation
-
-> *(PDF.co Workflow)*
+Together, these workflows automate the complete educational lifecycle—from creating learning materials to monitoring student progress.
 
 ---
 
-### Gmail Automation
+## 🤖 AI Content Generation & Distribution
 
-> *(Email Distribution Node)*
+This is the primary workflow responsible for creating and distributing educational materials.
+
+The process begins when a teacher submits a lecture **topic** and an optional **subtopic** through a simple HTML form.
+
+The workflow then performs the following tasks automatically:
+
+1. Generates structured lecture notes using **Google Gemini Pro**.
+2. Creates multiple-choice quiz questions based on the generated notes.
+3. Converts the lecture notes into a professionally formatted PDF using **PDF.co**.
+4. Creates an interactive Google Form quiz automatically.
+5. Merges the generated PDF and quiz link into a single output.
+6. Sends personalized emails containing the study notes and quiz link to every student.
+
+This entire workflow executes automatically without requiring any manual intervention after the teacher submits the topic.
+
+<p align="center">
+  <img src="assets/workflow/content-generation-workflow.png" alt="AI Content Generation Workflow" width="100%">
+</p>
 
 ---
 
-## 🧩 Node-by-Node Explanation
+## 📊 Student Performance Tracking
 
-| Node | Purpose |
-|------|---------|
-| **HTML Form** | Accepts the lecture subject and optional subtopic from the teacher. |
-| **Webhook** | Receives the submitted form data and starts the automation workflow. |
-| **Gemini Pro (Summary Agent)** | Generates structured lecture notes from the provided topic. |
-| **Gemini Pro (Quiz Agent)** | Creates quiz questions based on the generated lecture summary. |
-| **String to JSON** | Converts AI-generated quiz content into structured JSON format. |
-| **HTTP Request (Google Forms)** | Creates a Google Form quiz automatically using the generated JSON. |
-| **HTML Conversion** | Converts lecture notes into HTML format before PDF generation. |
-| **PDF.co** | Generates a professionally formatted PDF from the HTML content. |
-| **HTTP Request (Download PDF)** | Downloads the generated PDF for distribution. |
-| **Merge** | Combines the PDF and Google Form link into a single workflow output. |
-| **Code Node** | Processes student email data and prepares the final email payload. |
-| **Gmail** | Sends the lecture PDF and quiz link to all students automatically. |
+A dedicated secondary workflow continuously monitors student quiz submissions.
+
+Whenever a student completes the Google Form quiz:
+
+1. Google Forms records the response in Google Sheets.
+2. A Google Sheets Trigger automatically detects the newly submitted response.
+3. The workflow extracts the student's information and quiz score.
+4. A structured performance report is automatically updated.
+5. Teachers can review student performance without manually collecting or organizing quiz results.
+
+This workflow closes the learning feedback loop by providing educators with organized and up-to-date assessment data.
+
+<p align="center">
+  <img src="assets/workflow/student-performance-workflow.png" alt="Student Performance Tracking Workflow" width="100%">
+</p>
+
+---
+
+## 📸 Project Outputs
+
+The following screenshots showcase the complete journey of the Smart Study Assistant—from teacher input to automated content generation, quiz creation, student distribution, and performance tracking.
+
+---
+
+### 📝 HTML Input Form
+
+Teachers begin by entering the lecture **topic**, an optional **subtopic**, and the **teacher's name** through a simple web interface.
+
+<p align="center">
+  <img src="assets/screenshots/html-form.png" alt="HTML Input Form" width="80%">
+</p>
+
+---
+
+### 📄 AI-Generated Study Notes (PDF)
+
+The workflow converts AI-generated lecture notes into a professionally formatted PDF that is ready to share with students.
+
+<p align="center">
+  <img src="assets/screenshots/generated-pdf.png" alt="Generated PDF Notes" width="80%">
+</p>
+
+---
+
+### 📋 AI-Generated Google Form Quiz
+
+Based on the generated lecture notes, the system automatically creates a Google Forms quiz containing multiple-choice questions for student assessment.
+
+<p align="center">
+  <img src="assets/screenshots/google-form.png" alt="Generated Google Form Quiz" width="80%">
+</p>
+
+---
+
+### 📧 Automated Student Email
+
+Every student automatically receives a personalized email containing:
+
+- 📄 Lecture Notes (PDF)
+- 📋 Google Form Quiz Link
+
+<p align="center">
+  <img src="assets/screenshots/student-email.png" alt="Student Email" width="90%">
+</p>
+
+---
+
+### 📊 Student Performance Report
+
+After students submit the quiz, a dedicated workflow automatically records their responses and generates an organized performance report in Google Sheets.
+
+<p align="center">
+  <img src="assets/screenshots/student-performance-report.png" alt="Student Performance Report" width="90%">
+</p>
+
+---
+
+## 🎯 Real-World Use Case
+
+Imagine a teacher wants to prepare study material for the topic **Cloud Computing**.
+
+Instead of spending hours writing notes, creating quizzes, formatting PDFs, building Google Forms, emailing students, and tracking quiz responses manually, the teacher simply enters the topic and optional subtopic into the Smart Study Assistant.
+
+The system automatically:
+
+- 🤖 Generates AI-powered lecture notes
+- 📄 Creates a professional PDF document
+- 📝 Builds an interactive Google Form quiz
+- 📧 Sends study materials to every student
+- 📊 Tracks quiz submissions automatically
+- 📈 Maintains a centralized student performance report
+
+What traditionally takes hours of manual effort is completed within minutes through a fully automated workflow.
 
 ---
 
 ## 🚧 Challenges Faced
 
-Building the Smart Study Assistant involved integrating multiple AI services and APIs into a single automated workflow. During development, several technical challenges were encountered and resolved.
+Developing the Smart Study Assistant required integrating multiple AI services, APIs, and automation workflows into a reliable end-to-end system.
 
-### 1. AI Response Formatting
+Some of the key challenges included:
 
-**Challenge**
+### 🤖 AI Response Formatting
 
-Gemini Pro occasionally generated quiz content in an inconsistent format, making it difficult to process automatically.
-
-**Solution**
-
-Implemented a JavaScript Code node to transform the AI response into a structured JSON format before sending it to the Google Forms API.
+Ensuring that AI-generated lecture notes and quiz questions followed a structured format suitable for downstream automation.
 
 ---
 
-### 2. Google Forms API Payload
+### 📋 Dynamic Google Form Creation
 
-**Challenge**
-
-The Google Forms API expects quiz questions in a specific JSON structure. Even small formatting issues prevented form creation.
-
-**Solution**
-
-Validated and transformed the generated JSON before making the HTTP request, ensuring compatibility with the API.
+Transforming AI-generated quiz content into a structured JSON format compatible with the Google Forms API.
 
 ---
 
-### 3. PDF Generation Workflow
+### 📄 PDF Generation
 
-**Challenge**
-
-AI-generated lecture notes could not be directly converted into a downloadable PDF.
-
-**Solution**
-
-Converted the lecture notes into HTML and used PDF.co to generate a professional PDF document, which was then downloaded through an HTTP Request node.
+Converting AI-generated HTML content into professionally formatted PDF documents while preserving readability and layout.
 
 ---
 
-### 4. Parallel Workflow Synchronization
+### 🔄 Workflow Synchronization
 
-**Challenge**
-
-Quiz generation and PDF generation run independently but both outputs are required before sending emails.
-
-**Solution**
-
-Used the Merge node to synchronize both branches, ensuring that the workflow proceeds only after the PDF and quiz link are available.
+Managing parallel workflow execution so that both the generated PDF and quiz link were available before sending emails.
 
 ---
 
-### 5. Automated Email Distribution
+### 📧 Automated Distribution
 
-**Challenge**
-
-The final email required both the generated PDF attachment and the Google Form quiz link while supporting multiple student recipients.
-
-**Solution**
-
-Used a JavaScript Code node to prepare the email payload and student email list before sending personalized emails through Gmail.
+Preparing personalized emails containing both PDF attachments and quiz links for multiple students.
 
 ---
 
-### 6. End-to-End Workflow Automation
+### 📊 Performance Tracking
 
-**Challenge**
-
-Managing AI generation, PDF conversion, API requests, email automation, and data synchronization within a single workflow while maintaining reliability.
-
-**Solution**
-
-Designed the workflow using n8n's modular node architecture, allowing each service to perform a dedicated task while ensuring smooth data flow between components.
+Designing a separate automation workflow that continuously monitors quiz submissions and updates student performance reports automatically.
 
 ---
 
-## 📈 Future Improvements
+## 🚀 Future Enhancements
 
-Several enhancements can further improve the Smart Study Assistant:
+The Smart Study Assistant has been designed with scalability in mind. Future improvements that can further enhance the system include:
 
-- 📱 Telegram or WhatsApp integration for instant student notifications.
-- 🌍 Multi-language lecture note and quiz generation.
-- 🎙️ Voice-based lecture input using speech-to-text.
-- 📊 Interactive analytics dashboard for student performance.
-- 🎯 Personalized quizzes based on previous quiz results.
-- 📚 Automatic storage of generated study materials in Google Drive.
-- 🧠 Support for multiple AI models such as OpenAI GPT and Claude.
-- 🎥 Automatic generation of presentation slides from lecture notes.
-- 🔐 User authentication for teachers and students.
-
----
-
-## 🎯 Key Learnings
-
-Developing the AI Smart Study Assistant strengthened my understanding of:
-
-- Workflow automation using n8n
-- Prompt engineering for AI-generated educational content
-- AI integration with Gemini Pro
-- REST API integration using HTTP Request nodes
-- Google Forms automation
-- PDF generation workflows
-- JSON data transformation using JavaScript
-- Email automation with Gmail
-- Workflow branching and synchronization using Merge nodes
-- Designing scalable AI-powered automation systems
+- 🌍 Multi-language support for study notes and quizzes.
+- 🎙️ Voice-based topic input using speech-to-text.
+- 📱 WhatsApp and Telegram integration for instant student notifications.
+- 📊 Interactive dashboard for visualizing student performance analytics.
+- ☁️ Automatic storage of generated study materials in Google Drive.
+- 🧠 Support for multiple AI models such as OpenAI GPT, Claude, and Llama.
+- 🎨 AI-generated presentation slides from lecture notes.
+- 🔐 Teacher authentication and role-based access control.
+- 📚 Student portal for accessing previous study materials and quiz history.
 
 ---
 
-## 📊 Project Impact
+## 🎓 Key Learnings
 
-By automating repetitive academic tasks, the AI Smart Study Assistant significantly reduces the time teachers spend preparing and distributing study materials.
+Building the AI Smart Study Assistant provided hands-on experience in designing and integrating AI-powered automation workflows.
 
-### Benefits for Teachers
+Through this project, I gained practical experience with:
 
-- ⏱️ Reduces manual lecture preparation time
-- 🤖 Automates note and quiz generation
-- 📄 Eliminates repetitive PDF creation
-- 📧 Automates distribution of study materials
-- 📊 Simplifies quiz response tracking
-
-### Benefits for Students
-
-- 📚 Receive structured study notes instantly
-- 📝 Access interactive quizzes through Google Forms
-- 📄 Download professionally formatted PDF notes
-- 📩 Receive all learning resources directly via email
-
-This workflow demonstrates how AI and workflow automation can simplify educational processes while improving productivity and consistency.
+- 🤖 AI-powered content generation using Google Gemini Pro.
+- ⚙️ End-to-end workflow automation with n8n.
+- 🔗 REST API integration using HTTP Request nodes.
+- 📋 Dynamic Google Forms creation through APIs.
+- 📄 HTML-to-PDF conversion using PDF.co.
+- 📊 Automated student performance tracking with Google Sheets.
+- 📧 Email automation using Gmail.
+- 🧩 Workflow branching, synchronization, and data transformation.
+- 💻 JavaScript for JSON processing and workflow customization.
+- 🏗️ Designing scalable AI-powered educational automation systems.
 
 ---
 
 ## 👨‍💻 Author
 
-**Saurabh  A. Patil**
+**Saurabh A. Patil**
 
-MCA Student | AI Automation & GenAI Enthusiast
+MCA Student | AI Automation & Generative AI Enthusiast
 
-Passionate about building AI-powered workflow automation systems using Large Language Models (LLMs), n8n, APIs, and modern automation tools to solve real-world problems.
+I enjoy building AI-powered automation systems that solve real-world problems by combining Large Language Models (LLMs), workflow automation, APIs, and cloud technologies.
 
-### Connect with me
+### 📬 Connect with Me
 
-- 💼 LinkedIn: *(Add your LinkedIn URL)*
-- 🐙 GitHub: *(Add your GitHub URL)*
+- 💼 LinkedIn: https://www.linkedin.com/in/YOUR-LINKEDIN
+- 🐙 GitHub: https://github.com/YOUR-USERNAME
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
-You are welcome to explore the project for learning and inspiration. Please provide appropriate credit if you reference or adapt any part of this work.
+You are welcome to explore this repository for learning and inspiration.
 
 ---
 
-## 🌟 Support
+## ⭐ Support
 
-If you found this project helpful or interesting, consider giving it a ⭐ on GitHub. Your support motivates me to continue building and sharing AI automation projects.
-
+If you found this project helpful or interesting, consider giving it a ⭐ on GitHub. Your support motivates me to continue building AI-powered automation projects and sharing them with the developer community.
