@@ -232,7 +232,11 @@ The workflow converts AI-generated lecture notes into a professionally formatted
 Based on the generated lecture notes, the system automatically creates a Google Forms quiz containing multiple-choice questions for student assessment.
 
 <p align="center">
-  <img src="assets/screenshots/google-form.png" alt="Generated Google Form Quiz" width="80%">
+  <img src="assets/screenshots/google-form-1.png" alt="Generated Google Form Quiz" width="80%">
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/google-form-2.png" alt="Generated Google Form Quiz" width="80%">
 </p>
 
 ---
