@@ -370,8 +370,8 @@ I enjoy building AI-powered automation systems that solve real-world problems by
 
 ### 📬 Connect with Me
 
-- 💼 LinkedIn: https://www.linkedin.com/in/YOUR-LINKEDIN
-- 🐙 GitHub: https://github.com/YOUR-USERNAME
+- 💼 LinkedIn: https://www.linkedin.com/in/saurabhpatil-ai
+- 🐙 GitHub: https://github.com/saurabhpatil67
 
 ---
 
