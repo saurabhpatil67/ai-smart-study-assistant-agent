@@ -6,7 +6,16 @@ An AI-powered workflow automation system that transforms a lecture topic into st
 
 <p align="center">
 
-🤖 <strong>Google Gemini Pro</strong> • ⚙️ <strong>n8n</strong> • 📄 <strong>PDF.co</strong> • 📋 <strong>Google Forms</strong> • 📧 <strong>Gmail</strong>
+<img src="https://img.shields.io/badge/n8n-Workflow%20Automation-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" />
+<img src="https://img.shields.io/badge/Google-Gemini%20Pro-4285F4?style=for-the-badge&logo=google&logoColor=white" />
+<img src="https://img.shields.io/badge/Google%20Forms-Quiz%20Automation-34A853?style=for-the-badge&logo=googleforms&logoColor=white" />
+
+</p>
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/PDF.co-PDF%20Generation-0A84FF?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Gmail-Email%20Automation-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
 
 </p>
 
