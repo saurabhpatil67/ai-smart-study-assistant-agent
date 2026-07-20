@@ -79,7 +79,7 @@ Some of the common challenges include:
 - ⏳ Time-consuming preparation of lecture notes
 - 📝 Manual quiz creation for every topic
 - 📄 Formatting notes into shareable PDF documents
-- 📧 Sending study materials individually to students
+- 📧 Sending study materials to students
 - 📋 Creating online quizzes manually
 - 📊 Tracking student performance and quiz responses
 - 🔁 Repeating the same workflow for every lecture
@@ -102,7 +102,6 @@ The workflow intelligently:
 - 📋 Builds an interactive Google Form automatically
 - 📧 Sends personalized emails containing the PDF and quiz link to students
 - 📊 Tracks student quiz submissions through a dedicated automation workflow
-- 📈 Generates an organized performance report for teachers
 
 The entire process is orchestrated using **n8n**, allowing multiple cloud services and AI capabilities to work together seamlessly without requiring manual intervention.
 
@@ -152,7 +151,7 @@ The Smart Study Assistant is built around two independent yet connected automati
 
 The first workflow focuses on **content generation and distribution**, where Artificial Intelligence creates educational resources and automatically delivers them to students.
 
-The second workflow focuses on **student performance tracking**, where every quiz submission is automatically recorded and transformed into a structured performance report for educators.
+The second workflow focuses on **student performance tracking**, where every quiz submission is automatically recorded for educators.
 
 Together, these workflows automate the complete educational lifecycle—from creating learning materials to monitoring student progress.
 
@@ -277,7 +276,6 @@ The system automatically:
 - 📝 Builds an interactive Google Form quiz
 - 📧 Sends study materials to every student
 - 📊 Tracks quiz submissions automatically
-- 📈 Maintains a centralized student performance report
 
 What traditionally takes hours of manual effort is completed within minutes through a fully automated workflow.
 
@@ -321,7 +319,7 @@ Preparing personalized emails containing both PDF attachments and quiz links for
 
 ### 📊 Performance Tracking
 
-Designing a separate automation workflow that continuously monitors quiz submissions and updates student performance reports automatically.
+Designing a separate automation workflow that continuously monitors quiz submissions and updates student performance automatically.
 
 ---
 
@@ -329,13 +327,11 @@ Designing a separate automation workflow that continuously monitors quiz submiss
 
 The Smart Study Assistant has been designed with scalability in mind. Future improvements that can further enhance the system include:
 
-- 🌍 Multi-language support for study notes and quizzes.
 - 🎙️ Voice-based topic input using speech-to-text.
 - 📱 WhatsApp and Telegram integration for instant student notifications.
 - 📊 Interactive dashboard for visualizing student performance analytics.
 - ☁️ Automatic storage of generated study materials in Google Drive.
 - 🧠 Support for multiple AI models such as OpenAI GPT, Claude, and Llama.
-- 🎨 AI-generated presentation slides from lecture notes.
 - 🔐 Teacher authentication and role-based access control.
 - 📚 Student portal for accessing previous study materials and quiz history.
 
